@@ -1,5 +1,5 @@
 # GeeksforGeeks
-GeeksforGeeks is a website to lear to code.  
+GeeksforGeeks is a website to learn to code.  
 It offers a lot of problem with various difficulty. In these problems there are classical algorithms to know.  
 
 https://www.geeksforgeeks.org/explore?page=1&sortBy=submissions&utm_source=auth&utm_medium=profile&utm_campaign=empty-data
