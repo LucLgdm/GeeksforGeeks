@@ -15,6 +15,7 @@ int editDistance(string& s1, string& s2) {
 	int n = s1.length(), m = s2.length();
 	int dp[n + 1][m + 1];
 
+	// dp[i][j] correspond au nombre minimal d'operation pour changer les i premiers caracteres de s1 en les j premiers de s2
 	for (int i = 0; i <= n; i++)
         dp[i][0] = i;
     for (int j = 0; j <= m; j++)
