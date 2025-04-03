@@ -29,3 +29,34 @@ vector<int> dfs(vector<vector<int>>& adj) {
 	dfs(0, adj, visited, result);
 	return result;
 }
+
+/***************
+ * With a stack
+ ***************/
+
+vector<int> dfs(vector<vector<int>>& adj) {
+	vector<int> result;
+	vector<bool> visited(adj.size(), false);
+	stack<int> s;
+
+	s.push(0); // Commencer par le nœud 0
+
+	while (!s.empty()) {
+		int node = s.top();
+		s.pop();
+
+		if (!visited[node]) {
+			visited[node] = true;
+			result.push_back(node);
+
+			// Ajouter les voisins dans la stack
+			for (int neighbor : adj[node]) {
+				if (!visited[neighbor]) {
+					s.push(neighbor);
+				}
+			}
+		}
+	}
+
+	return result;
+}
